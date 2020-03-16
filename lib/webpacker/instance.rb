@@ -1,5 +1,6 @@
 class Webpacker::Instance
-  cattr_accessor(:logger) { ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(STDOUT)) }
+  # cattr_accessor(:logger) { ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(STDOUT)) }
+  cattr_accessor(:logger) { ActiveSupport::TaggedLogging.new(Logger.new(STDOUT)) }
 
   attr_reader :root_path, :config_path
 
